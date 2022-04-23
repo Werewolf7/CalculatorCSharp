@@ -1,0 +1,67 @@
+﻿<Window x:Class="CalcTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalcTest"
+        mc:Ignorable="d"
+        Title="Примитивный калькьулятор" Height="450" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--  Кнопки калькулятора -->
+        <Button Grid.Row="6" Grid.Column="1" x:Name="button_0" Click="button_number_Click">0</Button>
+
+        <Button Grid.Row="5" Grid.Column="0" x:Name="button_1" Click="button_number_Click">1</Button>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="button_2" Click="button_number_Click">2</Button>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="button_3" Click="button_number_Click">3</Button>
+
+        <Button Grid.Row="4" Grid.Column="0" x:Name="button_4" Click="button_number_Click">4</Button>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="button_5" Click="button_number_Click">5</Button>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="button_6" Click="button_number_Click">6</Button>
+
+        <Button Grid.Row="3" Grid.Column="0" x:Name="button_7" Click="button_number_Click">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="button_8" Click="button_number_Click">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="button_9" Click="button_number_Click">9</Button>
+        
+
+        
+        <!-- Операции -->
+        <Button Grid.Row="1" Grid.Column="0" x:Name="button_min_op" Click="button_op_Click">min</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="button_max_op" Click="button_op_Click">max</Button>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="button_average_op" Click="button_op_Click">avg</Button>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="button_power_op" Click="button_op_Click">x^y</Button>
+
+        <Button Grid.Row="2" Grid.Column="3" x:Name="button_division_op" Click="button_op_Click">/</Button>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="button_multiplication_op" Click="button_op_Click">*</Button>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="button_subtraction_op" Click="button_op_Click">-</Button>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="button_addition_op" Click="button_op_Click">+</Button>
+        
+        <Button Grid.Row="6" Grid.Column="3" x:Name="button_equal_op" Click="button_equal_op_Click">=</Button>
+        <Button Grid.Row="6" Grid.Column="2" x:Name="button_comma_op" Click="button_comma_op_Click">,</Button>
+        <Button Grid.Row="6" Grid.Column="0" x:Name="button_plus_minus_op" Click="button_plus_minus_op_Click">+/-</Button>
+
+        <Button Grid.Row="2" Grid.Column="0" x:Name="button_clear_op" Click="button_clear_op_Click">C</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="button_clear_entry_op" Click="button_clear_entry_op_Click">CE</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="button_backspace_op" Content="&lt;=" Click="button_backspace_op_Click"></Button>
+        
+        <!-- Текстовое поле -->
+        <TextBox x:Name="calc_text_box" Grid.Column="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="40">0</TextBox>
+
+    </Grid>
+</Window>
